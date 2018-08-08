@@ -41,6 +41,12 @@ public class ProfileActivity extends AppCompatActivity {
         textViewUsername.setText(user.getUsername());
         textViewEmail.setText(user.getEmail());
 
+        findViewById(R.id.buttonEditprofile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this, ProfileEditActivity.class));
+            }
+        });
 
         //when the user presses logout button
         //calling the logout method

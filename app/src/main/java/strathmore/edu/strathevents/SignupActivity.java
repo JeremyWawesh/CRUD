@@ -129,8 +129,7 @@ public class SignupActivity extends AppCompatActivity {
                                 User user = new User(
                                         userJson.getInt("id"),
                                         userJson.getString("username"),
-                                        userJson.getString("email"),
-                                        userJson.getString(password)
+                                        userJson.getString("email")
                                 );
 
                                 //storing the user in shared preferences
@@ -140,6 +139,7 @@ public class SignupActivity extends AppCompatActivity {
                                 finish();
                                 startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                             } else {
+//                                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {

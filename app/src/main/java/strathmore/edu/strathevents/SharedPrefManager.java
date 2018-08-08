@@ -17,7 +17,7 @@ import android.content.SharedPreferences;
 public class SharedPrefManager {
 
     //the constants
-    private static final String SHARED_PREF_NAME = "simplifiedcodingsharedpref";
+    public static final String SHARED_PREF_NAME = "simplifiedcodingsharedpref";
     private static final String KEY_USERNAME = "keyusername";
     private static final String KEY_EMAIL = "keyemail";
     private static final String KEY_GENDER = "keygender";
@@ -26,7 +26,7 @@ public class SharedPrefManager {
     private static SharedPrefManager mInstance;
     private static Context mCtx;
 
-    private SharedPrefManager(Context context) {
+    public SharedPrefManager(Context context) {
         mCtx = context;
     }
 
